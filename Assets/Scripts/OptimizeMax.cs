@@ -16,8 +16,7 @@ public class OptimizeMax : MonoBehaviour
     void Update()
     {
         if (objRenderer == null || mainCam == null) return;
-
-        // ถ้า renderer มองไม่เห็นจากกล้อง
+        
         bool isVisible = GeometryUtility.TestPlanesAABB(
             GeometryUtility.CalculateFrustumPlanes(mainCam),
             objRenderer.bounds
